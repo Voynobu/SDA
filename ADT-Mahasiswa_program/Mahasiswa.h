@@ -115,7 +115,8 @@ void SortByName(address p);
 
 void SortByInfo(address p);
 
-void CopytoList2(address p);
+void CopytoList(address p, address *First2);
 
+int IsNameUnique(address head, char *name);
 #endif
 

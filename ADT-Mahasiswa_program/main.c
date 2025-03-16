@@ -36,6 +36,16 @@ int main() {
 	SortByInfo(First1);
 	Tampil_List(First1);	
 	
+		
+	Create_Node(&L1);
+	Isi_Node(&L1, 84, "Zaidan");
+	InsertAfter(&First1, L1);
+	SortByName(First1);
+	Tampil_List(First1);	
+	SortByInfo(First1);
+	Tampil_List(First1);	
+	
+	
 	Create_Node(&L1);
 	Isi_Node(&L1, 65, "Bebadobee");
 	InsertAfter(&First1, L1);
@@ -47,7 +57,19 @@ int main() {
 	Jumlah = NbElmt(First1);
 	printf("\nTotal elemen dalam list adalah %d\n\n", Jumlah);
 	
+	CopytoList(First1, &First2);
+	printf("\nList2(nilai>70) dan Nama unik:\n");
+	SortByName(First2);
+	Tampil_List(First2);
+	SortByInfo(First2);
+	Tampil_List(First2);
+	
+	printf("Kedua list telah dihapus!!\n");
 	Destroy_All(&First1);
 	Tampil_List(First1);
 	First1 = NULL;
+	
+	Destroy_All(&First2);
+	Tampil_List(First2);
+	First2 = NULL;
 }

@@ -417,12 +417,12 @@ void SortByInfo(address p) {
     printf("\nHasil sorting secara nilai (descending):\n");
 }
 
-void CopytoList70(address p, address *First2) {
+void CopytoList(address p, address *First2) {
     address curr = p; 
     address lastL2 = NULL; 
 
     while (curr != NULL) {
-        if (curr->info > 70) {
+        if (curr->info > 70 && IsNameUnique(*First2, curr->name)) {
            
             address newNode;
             Create_Node(&newNode); 
@@ -454,6 +454,16 @@ void CopytoList70(address p, address *First2) {
     }
 }
 
+int IsNameUnique(address head, char *name) {
+    address curr = head;
+    while (curr != NULL) {
+        if (strcmp(curr->name, name) == 0) {
+            return 0; 
+        }
+        curr = curr->next;
+    }
+    return 1; 
+}
 
 #endif
 
