@@ -12,8 +12,9 @@ int main()
 		char input;
 		printf("Masukan bilangan desimal yang ingin di konversi: ");
 		scanf("%d", &nilai);
+		getchar();
 		KonversiDecimaltoBiner(nilai, &First);
-			printf("\n\n\nHasil konversi Desimal->Biner : ");
+		printf("\n\n\nHasil konversi Desimal->Biner : ");
 		TampilkanBiner(&First);
 		
 		printf("\nApakah anda ingin mencoba lagi('Y'/'T'): ");
